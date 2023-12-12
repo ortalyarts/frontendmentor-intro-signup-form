@@ -1,0 +1,198 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul {
+  margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  /* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+img {
+  vertical-align: middle;
+}
+/* General STYLE */
+:root {
+
+    --color1:hsl(0, 100%, 74%) ;
+    --color2: hsl(154, 59%, 51%);
+    --color3:hsl(248, 32%, 49%);
+    --color4:hsl(249, 10%, 26%) ;
+    --color5: hsl(246, 25%, 77%);
+
+    --gradient1: linear-gradient(136deg, #ffffff, #fff1f1);
+
+    --ffparagraph: 'Poppins', sans-serif;;
+    --fsparagraph: 1rem;
+}
+body {
+    padding:0 1.5rem;
+    font-family: var(--ffparagraph);
+    text-rendering: optimizeSpeed;
+    text-align:left; 
+    background: var(--color1) url(images/bg-intro-desktop.png) repeat;
+    /* to stick the footer to the bottom */
+    min-height: 100vh;  
+    display:flex; flex-direction:column; 
+}
+h1, h2, h3, ul {
+    padding:0;
+}
+main {
+    max-width: 20.438rem;
+    margin:auto;
+    display:grid;
+    text-align:center;
+    
+}
+h1 {
+  font-size:1.8rem;
+  line-height:2.5rem;
+  color: white;
+  font-weight:700;
+  margin:2rem 0 1.2rem 0;
+}
+
+.left p {
+  color: white;
+  font-size: var(--fsparagraph);
+  line-height:1.6rem;
+  font-weight:400;
+}
+.callForAction {
+  background: var(--color3);
+  padding: 1.1rem 3rem;
+  border-radius:0.5rem;
+  text-align:center;
+  margin:4.375rem 0 1.375rem 0;
+  box-shadow:0 0.5rem 0rem 0rem rgba(0, 0, 0, 0.15);
+}
+.callForAction p {
+  line-height:1.6rem;
+  color: white;
+  font-size: 0.95rem;
+}
+.form-holder {
+  background:white;
+  border-radius:0.5rem;
+  padding:1.5rem;
+  display:grid;
+  gap:1.2rem;
+  box-shadow:0 0.5rem 0rem 0rem rgba(0, 0, 0, 0.15);
+}
+.input-holder input{
+  border-radius:0.3rem;
+  border: 1px solid var(--color5);
+  font-size:0.9rem;
+  font-weight:600;
+  color: var(--color4);
+  padding:1.02rem 1.3rem;
+  width:100%;
+}
+.input-holder input:focus, .input-holder input:active { 
+  border-color: var(--color4) !important;
+  outline: none;
+}
+
+::placeholder {
+  color: var(--color4);
+  opacity: 0.7; /* Firefox */
+}
+#submit {
+  background:var(--color2);
+  transition: 0.5s;
+  color:white;
+  font-size:0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding:1.1rem 0 1rem 0;
+  border:none;
+  cursor:pointer;
+  width:100%;
+  border-radius:0.3rem;
+  box-shadow:0 0.2rem 0rem 0rem #5da688;
+}
+#submit:hover {
+  background: #77e2b4;
+}
+/* Invalid message */
+.input-invalid { 
+  border: 1px solid var(--color1) !important;
+  background:url(images/icon-error.svg) no-repeat;
+  background-position: right 1rem center;
+}
+.invalid-message, .email-invalid-message {
+  display:none;
+  padding:0.2rem 0 0 1.3rem;
+}
+.activeMessage {
+  display:block !important;
+}
+.invalid-message p, .email-invalid-message p {
+  color: var(--color1);
+  font-size: 0.7rem;
+  text-align: right;
+  font-weight: 500 ;
+  font-style: italic;
+}
+
+
+/* End of Invalid message */
+
+.terms {
+  padding: 0 1rem;
+}
+.terms p {
+ color: var(--color5);
+ font-size: 0.7rem;
+ line-height:1.2rem;
+ font-weight:500;
+ text-align:center;
+}
+.terms p a {
+  color: var(--color1);
+  font-weight: 600;
+}
+
+
+footer p { font-size: 11px; text-align: center; color: var(--color4); }
+footer p a { color: var(--color4); }
+
+
+@media screen and (min-width:55rem) {
+  body {
+    padding:0 2rem; 
+  }
+  main {
+    max-width: 69.375rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap:1.75rem;
+    text-align:left;
+  }
+  h1 {
+    font-size:3.03rem;
+    line-height:3.5rem;
+    margin:0.9rem 0 1.7rem 0;
+  }
+  .callForAction {
+    margin:0 0 1.375rem 0;
+  }
+  .form-holder {
+    padding:2.5rem;
+  }
+  .input-holder input {
+    padding:1.02rem 2rem;
+  }
+
+}

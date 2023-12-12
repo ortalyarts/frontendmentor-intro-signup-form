@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+</head>
+<body>
+  <main>
+    <div class="left">
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. 
+      </p>
+    </div>
+    <div class="right">
+      <div class="callForAction">
+        <p>
+          <b>Try it free 7 days</b> then $20/mo. thereafter
+        </p>
+      </div>
+      <div class="form-holder">
+        <div id="input-firstName" class="input-holder">
+          <input type="text" required="required" placeholder="First Name" name="firstName" id="firstName">
+          <div id="invalid-message-firstName" class="invalid-message">
+            <p>First name cannot be empty</p>
+          </div>
+        </div>
+        <div id="input-lastName" class="input-holder">
+          <input type="text" required="required" placeholder="Last Name" name="lastName" id="lastName">
+          <div id="invalid-message-lastName" class="invalid-message">
+            <p>Last name cannot be empty</p>
+          </div>
+        </div>
+        <div id="input-email" class="input-holder">
+          <input type="email" required="required" placeholder="Email Address" name="Email" id="Email" autocomplete="Email">
+          <div class="invalid-message">
+            <p>Please provide a valid email</p>
+          </div>
+          <div class="email-invalid-message" id="email-invalid-message">
+            <p>Looks like this is not an email</p>
+          </div>
+        </div>
+        <div id="input-pass" class="input-holder">
+          <input type="password" required="required" placeholder="Password" name="password" id="password">
+          <div id="invalid-message-pass" class="invalid-message">
+            <p>Please provide a valid email</p>
+          </div>
+        </div>
+  
+        <button type="button" id="submit">Claim your free trial</button>
+        <div class="terms">
+          <p>
+            By clicking the button, you are agreeing to our <a href="">Terms and Services</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+   
+</main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
